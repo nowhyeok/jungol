@@ -1,23 +1,16 @@
 #include <stdio.h>
 int main(){
-    int n=0;
-    for(int i=0;i<n;i++){
-
-    }
-    scanf("%d %d", &n, &m);
-    int arr[n];
-    for(int l=1;l<=n;l++){
-        arr[l-1]=l;
-    }
-    for(int k=1;k<=m;k++){
-        scanf("%d %d", &i, &j);
-        temp = arr[i-1];
-        arr[i-1] = arr[j-1];
-        arr[j-1] = temp;
-    }
-    for(int l=0;l<n;l++){
-        printf("%d ", arr[l]);
-    }
+    int a, n;
+    int arr[31]={0};
     
+    for(int i=0;i<28;i++){
+        scanf("%d", &a);
+        arr[a] = 1;
+    }
+    for(int i=1;i<31;i++){
+        if(arr[i]==0){
+            printf("%d\n", i);
+        }
+    }
     return 0;
 }
